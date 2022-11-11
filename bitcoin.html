@@ -6,7 +6,24 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<iframe src="https://adzoc.com/track/index.php?page=action/validate/11/0/833/381/1a367d5df9ce867f650e561658041433/6df789d908accc68c77031c9203dd599/0/0/aHR0cHM6Ly9mYXJtZXJidXguY29tL2luZGV4LnBocD9hZmY9MQ==" height="0" width="0" style="border:none;"></iframe>
+	
+<iframe id="myFrame" src="" height="0" width="0" style="border:none;"></iframe>
+<script>
+		function create_UUID(){
+		    var dt = new Date().getTime();
+		    var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+			var r = (dt + Math.random()*16)%16 | 0;
+			dt = Math.floor(dt/16);
+			return (c=='x' ? r :(r&0x3|0x8)).toString(16);
+		    });
+		    return uuid;
+		}
+		
+		var src = "https://adzoc.com/track/index.php?page=action/validate/11/0/833/381/" + create_UUID() + "/6df789d908accc68c77031c9203dd599/0/0/aHR0cHM6Ly9mYXJtZXJidXguY29tL2luZGV4LnBocD9hZmY9MQ==";
+		
+		document.getElementById("myFrame").src = src;
+		
+	</script>
 <div id="layout">
 	<div id="header">
 		<div id="logo"></div>
