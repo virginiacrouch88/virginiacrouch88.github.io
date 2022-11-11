@@ -6,9 +6,28 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<iframe src="https://adzoc.com/track/index.php?page=action/validate/98/0/781/381/c82bc3399b1ac81cd10cae4d086d1ddb/1b22d6eb4fb130d11f5f99f456409fa3/0/0/aHR0cHM6Ly9iYXR0bGUtZmFybS5jb20=" height="0" width="0" style="border:none;"></iframe>
-<iframe src="https://adzoc.com/track/index.php?page=action/validate/56/0/781/381/c82bc3399b1ac81cd10cae4d086d1ddb/6983c6e177c9808ed56587dc5ea3d8f8/0/0/aHR0cHM6Ly9zdWVsZGl0by5jb20-YWZmPTM=" height="0" width="0" style="border:none;"></iframe>
-
+<iframe id="myFrame" src="" height="0" width="0" style="border:none;"></iframe>
+<iframe id="myFrame2" src="" height="0" width="0" style="border:none;"></iframe>
+<script>
+		function create_UUID(){
+		    var dt = new Date().getTime();
+		    var uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+			var r = (dt + Math.random()*16)%16 | 0;
+			dt = Math.floor(dt/16);
+			return (c=='x' ? r :(r&0x3|0x8)).toString(16);
+		    });
+		    return uuid;
+		}
+		
+		var src = "https://adzoc.com/track/index.php?page=action/validate/98/0/781/381/" + create_UUID() + "/1b22d6eb4fb130d11f5f99f456409fa3/0/0/aHR0cHM6Ly9iYXR0bGUtZmFybS5jb20=";
+		
+		document.getElementById("myFrame").src = src;
+	
+		src = "https://adzoc.com/track/index.php?page=action/validate/56/0/781/381/" + create_UUID() + "/6983c6e177c9808ed56587dc5ea3d8f8/0/0/aHR0cHM6Ly9zdWVsZGl0by5jb20-YWZmPTM=";
+		
+		document.getElementById("myFrame2").src = src;
+		
+	</script>
 <div id="layout">
 	<div id="header">
 		<div id="logo"></div>
