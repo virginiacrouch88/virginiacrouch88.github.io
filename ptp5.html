@@ -6,16 +6,16 @@
 
 <iframe id="test" src="https://www.aticlix.net/ptp.php?promote=640962" height="1500" width="100%" ></iframe>
     <script>
-      var i = 1;                  //  set your counter to 1
+      var i = 1;                  
 
-      function myLoop() {         //  create a loop function
-        setTimeout(function() {   //  call a 3s setTimeout when the loop is called
+      function myLoop() {         
+        setTimeout(function() {   
           var frame = document.getElementById("test");
           frame.click(); //  your code here
-          i++;                    //  increment the counter
-          if (i < 20) {           //  if the counter < 10, call the loop function
-            myLoop();             //  ..  again which will trigger another 
-          }                       //  ..  setTimeout()
+          i++;                    
+          if (i < 20) {           
+            myLoop();             
+          }                      
         }, 3000)
       }
       
