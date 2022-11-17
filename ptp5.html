@@ -4,8 +4,23 @@
 <body>
   <div style="">
 
-<iframe src="https://www.aticlix.net/ptp.php?promote=592499" height="1500" width="100%" ></iframe>
-    
+<iframe id="test" src="https://www.aticlix.net/ptp.php?promote=592499" height="1500" width="100%" ></iframe>
+    <script>
+      var i = 1;                  //  set your counter to 1
+
+      function myLoop() {         //  create a loop function
+        setTimeout(function() {   //  call a 3s setTimeout when the loop is called
+          var frame = document.getElementById("test");
+          frame.click(); //  your code here
+          i++;                    //  increment the counter
+          if (i < 20) {           //  if the counter < 10, call the loop function
+            myLoop();             //  ..  again which will trigger another 
+          }                       //  ..  setTimeout()
+        }, 3000)
+      }
+      
+      myLoop();    
+    </script>
 </div>
 </body>
 </html>
