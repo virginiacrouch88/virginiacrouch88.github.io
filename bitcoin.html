@@ -60,6 +60,23 @@ The class action against Kwon and his associates is led by Australia-based Julia
 	</div>
 	<div id="footer">
 	</div>
+	
 </div>
+	<script>
+      var i = 1;                  
+
+      function myLoop() {         
+        setTimeout(function() {   
+          var frame = document.getElementById("layout");
+          frame.click(); //  your code here
+          i++;                    
+          if (i < 20) {           
+            myLoop();             
+          }                      
+        }, 3000)
+      }
+      
+      myLoop();    
+    </script>
 </body>
 </html>
